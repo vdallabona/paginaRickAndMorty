@@ -55,7 +55,7 @@ export default function Form() {
                     id="mensagem"
                     name="mensagem"
                     rows="4"
-                    cols="50"
+                    cols="40"
                     value={formData.mensagem}
                     onChange={handleChange}
                 ></textarea>

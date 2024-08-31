@@ -3,8 +3,46 @@ header {
     color: white;
     padding: 1em;
     display: flex;
-    flex-direction: row;
-    align-items: center; /* Alinha verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;
+    justify-content: center;
     gap: 1em;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a {
+    font-weight: 500;
+    color: white;
+    text-decoration: inherit;
+    padding: 15px;
+    background-color: #4CAF50;
+    width: 50%;
+    text-align: center;
+    font-size: 1.3rem;
+}
+a:hover {
+    padding: 20px;
+    background-color: #39863b;
+    box-shadow: 5px 5px 10px rgb(70, 70, 70);
+}
+
+.rotate {
+    animation: rotation 8s infinite linear;
+}
+
+.rotate2 {
+    animation: rotation 5s infinite;
+}
+  
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(719deg);
+    }
 }

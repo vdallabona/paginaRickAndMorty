@@ -1,0 +1,16 @@
+.rotateTeste1:hover {
+    animation: rotation 8s infinite linear;
+}
+
+.rotateTeste2:hover {
+    animation: rotation 5s infinite;
+}
+  
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(719deg);
+    }
+}

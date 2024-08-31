@@ -1,22 +1,23 @@
-import { useState } from 'react'
 import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Form from './components/Form'
-import List from './components/List'
-import Video from './components/Video'
+import Home from './pages/Home'
+import About from './pages/About'
+import Teste from './pages/TestePage'
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return (
     <>
       <Header />
-      <main>
-        <List titulo={"Lista 1"} />
-        <List titulo={"Lista 2"} />
-        <Video />
-        <Form />
-      </main>
-        <Footer />
+
+      <Routes>
+        <Route path='/' element={<Home />}/>
+        <Route path='/about' element={<About />}/>
+        <Route path='/testePage' element={<Teste />}/>
+      </Routes>
+
+      <Footer />
     </>
   )
 }
