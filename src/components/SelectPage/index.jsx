@@ -1,31 +1,24 @@
 import { useEffect, useState } from 'react'
 
-export default function SelectPage({ numero, total, onChange }) {
-    console.log(numero, total)
-    const [ options, setOptions ] = useState(<></>)
-    
-    function createOptions() {
-        const options = []
-
-        for(let index = 1; index <= total; index++) {
-            options.push(<option value={index}>Página {index}</option>)
-        }
-
-        return options
-    }
+export default function SelectPage({ numero, total, mudancaPagina }) {
+    const [options, setOptions] = useState([]);
 
     useEffect(() => {
-        function teste() {
-            setOptions(createOptions())
+        const novasOpcoes = [];
+        for (let index = 1; index <= total; index++) {
+            novasOpcoes.push(<option key={index} value={index}>Página {index}</option>);
         }
+        setOptions(novasOpcoes);
+    }, [total]);
 
-        teste()
-    }, [])
+    const mudarPagina = (evento) => {
+        const selectedPage = Number(evento.target.value);
+        mudancaPagina(selectedPage);
+    };
 
     return (
-        <select value={numero} onChange={(e) => onChange(e.target.value)}>
+        <select value={numero} onChange={mudarPagina}>
             {options}
         </select>
-    )
-    
+    );
 }

@@ -6,6 +6,7 @@ export default function APIRM() {
     const [conteudo, setConteudo] = useState(<p>Carregando...</p>);
     const [numero, setNumero] = useState(1);
     const [totalPages, setTotalPages] = useState(0)
+
     async function carregarTodosOsPersonagens() {
 
         const reqOptions = {
@@ -42,17 +43,16 @@ export default function APIRM() {
         });
     }
 
-    function mudancaDePagina(event) {
-        setNumero(Number(event.target.value));
+    function pularPagina(paginaNova) {
+        setNumero(paginaNova);
     }
-
 
     return (
         <main>
             <div className='lista-principal'>
                 <button onClick={() => atualizarPagina('-')}>Página anterior</button>
                 <p>Página {numero}</p>
-                <SelectPage numero={numero} total={totalPages} onChange={atualizarPagina}/>
+                <SelectPage numero={numero} total={totalPages} mudancaPagina={pularPagina}/>
                 <button onClick={() => atualizarPagina('+')}>Próxima página</button>
                 {conteudo}
                 <button onClick={() => atualizarPagina('-')}>Página anterior</button>
