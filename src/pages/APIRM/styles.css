@@ -1,0 +1,27 @@
+.linhaBotao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.linhaBotao select{
+    height: 35px;
+    width: 150px;
+    border-radius: 3ch;
+    text-align: center;
+    font-size: medium;
+    padding: 5px;
+}
+
+.linhaBotao button{
+    border-radius: 3ch;
+    background-color: #4CAF50;
+}
+
+.linhaBotao button:hover{
+    padding: 20px;
+    background-color: #39863b;
+    box-shadow: 5px 5px 10px rgb(70, 70, 70);
+    border: none;
+}

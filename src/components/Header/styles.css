@@ -51,3 +51,8 @@ a:hover {
 .animation1 {
     animation: 3s linear 1s infinite alternate;
 }
+
+.imagensHeader{
+    display: flex;
+    gap: 30px;
+}

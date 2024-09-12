@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../../components/Card';
-import SelectPage from '../../components/SelectPage'
+import SelectPage from '../../components/SelectPage';
+import './styles.css'
 
 export default function APIRM() {
     const [conteudo, setConteudo] = useState(<p>Carregando...</p>);
@@ -49,14 +50,17 @@ export default function APIRM() {
 
     return (
         <main>
-            <div className='lista-principal'>
+            <div className='linhaBotao'>
                 <button onClick={() => atualizarPagina('-')}>Página anterior</button>
-                <p>Página {numero}</p>
-                <SelectPage numero={numero} total={totalPages} mudancaPagina={pularPagina}/>
+                    <SelectPage numero={numero} total={totalPages} mudancaPagina={pularPagina}/>
                 <button onClick={() => atualizarPagina('+')}>Próxima página</button>
+            </div>
+            <div className='lista-principal'>
                 {conteudo}
+            </div>
+            <div className='linhaBotao'>
                 <button onClick={() => atualizarPagina('-')}>Página anterior</button>
-                <p>Página {numero}</p>
+                    <SelectPage numero={numero} total={totalPages} mudancaPagina={pularPagina}/>
                 <button onClick={() => atualizarPagina('+')}>Próxima página</button>
             </div>
         </main>
