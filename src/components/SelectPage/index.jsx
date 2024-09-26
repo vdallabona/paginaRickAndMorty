@@ -6,7 +6,7 @@ export default function SelectPage({ numero, total, mudancaPagina }) {
     useEffect(() => {
         const novasOpcoes = [];
         for (let index = 1; index <= total; index++) {
-            novasOpcoes.push(<option key={index} value={index}>Página {index}</option>);
+            novasOpcoes.push(<option key={index} value={index}>Page {index}</option>);
         }
         setOptions(novasOpcoes);
     }, [total]);

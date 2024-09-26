@@ -4,7 +4,7 @@ import SelectPage from '../../components/SelectPage';
 import './styles.css'
 
 export default function APIRM() {
-    const [conteudo, setConteudo] = useState(<p>Carregando...</p>);
+    const [conteudo, setConteudo] = useState(<p>Loading...</p>);
     const [numero, setNumero] = useState(1);
     const [totalPages, setTotalPages] = useState(0)
 
@@ -51,17 +51,17 @@ export default function APIRM() {
     return (
         <main>
             <div className='linhaBotao'>
-                <button onClick={() => atualizarPagina('-')}>Página anterior</button>
+                <button onClick={() => atualizarPagina('-')}>Previous Page</button>
                     <SelectPage numero={numero} total={totalPages} mudancaPagina={pularPagina}/>
-                <button onClick={() => atualizarPagina('+')}>Próxima página</button>
+                <button onClick={() => atualizarPagina('+')}>Next Page</button>
             </div>
             <div className='lista-principal'>
                 {conteudo}
             </div>
             <div className='linhaBotao'>
-                <button onClick={() => atualizarPagina('-')}>Página anterior</button>
+                <button onClick={() => atualizarPagina('-')}>Previous Page</button>
                     <SelectPage numero={numero} total={totalPages} mudancaPagina={pularPagina}/>
-                <button onClick={() => atualizarPagina('+')}>Próxima página</button>
+                <button onClick={() => atualizarPagina('+')}>Next Page</button>
             </div>
         </main>
     );
