@@ -6,26 +6,25 @@
 }
 
 .linhaBotao select{
-    height: 50px;
-    width: 10%;
+    height: 35px;
+    width: 100px;
     border-radius: 3ch;
     text-align: center;
     font-size: large;
-    padding: 5px;
+    padding: 3px;
 }
 
 @media screen and (max-width: 800px) {
     .linhaBotao select{
         height: 35px;
         width: 100px;
-        font-size: 1rem;
     }
 }
 
 .linhaBotao button{
     border-radius: 3ch;
     background-color: #4CAF50;
-    font-size: 2rem;
+    font-size: 1rem;
     width: 16%;
     text-align: center;
     padding-top: 10px;
@@ -37,7 +36,6 @@
     .linhaBotao button {
         padding-top: 10px;
         padding-bottom: 10px;
-        font-size: 1rem;
     }
 }
 
