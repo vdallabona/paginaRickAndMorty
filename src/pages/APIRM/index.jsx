@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Card from '../../components/Card';
 import SelectPage from '../../components/SelectPage';
-import './styles.css'
+import './styles.css';
 
 export default function APIRM() {
     const [conteudo, setConteudo] = useState(<p>Loading...</p>);
     const [numero, setNumero] = useState(1);
-    const [totalPages, setTotalPages] = useState(0)
+    const [totalPages, setTotalPages] = useState(0);
 
     async function carregarTodosOsPersonagens() {
 

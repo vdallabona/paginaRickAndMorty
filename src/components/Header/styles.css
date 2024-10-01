@@ -1,6 +1,6 @@
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #89e365;
+    color: black;
     padding: 1em;
     display: flex;
     align-items: center;
@@ -10,21 +10,21 @@ header {
 
 nav{
     display: flex;
-    background-color: #4CAF50;
+    background-color: #89e365;
     align-items: center;
     justify-content: center;
 }
 
 a {
     font-weight: 500;
-    color: white;
+    color: black;
     text-decoration: inherit;
     padding: 15px;
-    background-color: #4CAF50;
     width: 50%;
     text-align: center;
     font-size: 1.5rem;
     transition: 0.2s;
+    border-radius: 1ch;
 }
 
 @media screen and (max-width: 600px) {

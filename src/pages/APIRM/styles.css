@@ -23,13 +23,14 @@
 
 .linhaBotao button{
     border-radius: 3ch;
-    background-color: #4CAF50;
-    font-size: 1rem;
+    background-color: #89e365;
+    font-size: 1.5rem;
     width: 16%;
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
     min-width: 100px;
+    border: none;
 }
 
 @media screen and (max-width: 1600px) {
@@ -45,4 +46,5 @@
     background-color: #39863b;
     box-shadow: 5px 5px 10px rgb(70, 70, 70);
     border: none;
+    width: 20%;
 }
