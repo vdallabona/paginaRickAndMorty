@@ -40,7 +40,7 @@ export default function APIRM() {
     function atualizarPagina(valor) {
         setNumero(prevNumero => {
             const novoNumero = valor === '+' ? prevNumero + 1 : prevNumero - 1;
-            return novoNumero > 0 ? novoNumero : prevNumero; // se for menor que 0 ele retorna o número anterior pra evitar página negativa
+            return novoNumero > 0 ? novoNumero : prevNumero;
         });
     }
 

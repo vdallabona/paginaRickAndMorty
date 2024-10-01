@@ -12,9 +12,9 @@ export default function Header(){
                 </div>
             </header>
             <nav>
-                <Link to='/'>In progress</Link>
+                <Link to='/'>Characters</Link>
                 <Link to='/about'>In progress</Link>
-                <Link to='/APIRM'>Characters</Link>
+                <Link to='/Home'>In progress</Link>
             </nav>
         </>
     )
