@@ -11,15 +11,17 @@ function App() {
     <>
       <Header />
 
+      <div class="stars">
+        <div class="star"></div>
+      </div>
+
       <Routes>
         <Route path='/Home' element={<Home />}/>
         <Route path='/about' element={<About />}/>
         <Route path='/' element={<APIRM />}/>
       </Routes>
-
       <Footer />
     </>
   )
 }
-
 export default App
