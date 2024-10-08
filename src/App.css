@@ -4,7 +4,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 1em;
-  }
+}
   
 section {
   background-color: #f9f9f9;
@@ -24,7 +24,6 @@ section {
   min-width: 300px;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   .container {
       flex-direction: column;
