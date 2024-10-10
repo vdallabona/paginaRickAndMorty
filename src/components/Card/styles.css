@@ -40,7 +40,7 @@ h2 {
 
   .card:hover {
     min-width: 25%;
-    box-shadow: 0px 0px 30px #89e365;
+    box-shadow: 0px 0px 30px #fff;
   }
 }
 
@@ -52,7 +52,7 @@ h2 {
 
   .card:hover {
     min-width: 150px;
-    box-shadow: 0px 0px 30px #89e365;
+    box-shadow: 0px 0px 30px #fff;
   }
 }
 
