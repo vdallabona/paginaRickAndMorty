@@ -8,6 +8,7 @@ export default function APIRM() {
     const [numero, setNumero] = useState(1);
     const [filtroStatus, setFiltroStatus] = useState('');
     const [filtroGender, setFiltroGender] = useState('');
+    const [filtroSpecies, setFiltroSpecies] = useState('');
     const [totalPages, setTotalPages] = useState(0);
 
     async function carregarTodosOsPersonagens() {
@@ -18,7 +19,7 @@ export default function APIRM() {
         };
 
         const response = await fetch(
-            `https://rickandmortyapi.com/api/character?page=${numero}${filtroStatus}${filtroGender}`,
+            `https://rickandmortyapi.com/api/character?page=${numero}${filtroStatus}${filtroGender}${filtroSpecies}`,
             reqOptions
         );
 
@@ -59,13 +60,21 @@ export default function APIRM() {
         setNumero(1);
     }
     
+    function aplicarFiltroSpecies(speciesPersonagem) {
+        
+        const novoFiltro = '&species=' + speciesPersonagem;
+        
+        setFiltroSpecies(novoFiltro);
+        setNumero(1);
+    }
+    
     function pularPagina(paginaNova) {
         setNumero(paginaNova);
     }
     
     useEffect(() => {
         listaPersonagens();
-    }, [numero, filtroStatus, filtroGender]);
+    }, [numero, filtroStatus, filtroGender, filtroSpecies]);
 
     return (
         <main>
@@ -90,19 +99,12 @@ export default function APIRM() {
                     <option value="genderless">Genderless</option>
                     <option value="unknown">Unknown</option>
                 </select>
-                <select className='Filters' onChange={(event) => aplicarFiltroStatus(event.target.value)}>
-                    <option>In Development</option>
+                <select className='Filters' onChange={(event) => aplicarFiltroSpecies(event.target.value)}>
+                    <option>Species</option>
                     <option value="">All</option>
-                    <option value="alive">Alive</option>
-                    <option value="dead">Dead</option>
-                    <option value="unknown">Unknown</option>
-                </select>
-                <select className='Filters' onChange={(event) => aplicarFiltroStatus(event.target.value)}>
-                    <option>In Development</option>
-                    <option value="">All</option>
-                    <option value="alive">Alive</option>
-                    <option value="dead">Dead</option>
-                    <option value="unknown">Unknown</option>
+                    <option value="human ">Human</option>
+                    <option value="humanoid">Humanoid</option>
+                    <option value="alien">Alien</option>
                 </select>
             </div>
             <div className='lista-principal'>
