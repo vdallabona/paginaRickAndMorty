@@ -108,13 +108,6 @@ export default function APIRM() {
                     <option value="Mythological Creature">Mythological Creature</option>
                     <option value="unknown">Unknown</option>
                 </select>
-                <select className='Filters' onChange={(event) => aplicarFiltroStatus(event.target.value)}>
-                    <option>In Development</option>
-                    <option value="">All</option>
-                    <option value="alive">Alive</option>
-                    <option value="dead">Dead</option>
-                    <option value="unknown">Unknown</option>
-                </select>
             </div>
             <div className='lista-principal'>
                 {conteudo}
