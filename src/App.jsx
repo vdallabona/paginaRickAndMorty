@@ -2,7 +2,7 @@ import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Home from './pages/Home'
-import About from './pages/About'
+import Duck from './pages/Duck'
 import APIRM from './pages/APIRM'
 import { Route, Routes } from 'react-router-dom'
 
@@ -17,7 +17,7 @@ function App() {
 
       <Routes>
         <Route path='/Home' element={<Home />}/>
-        <Route path='/about' element={<About />}/>
+        <Route path='/Duck' element={<Duck />}/>
         <Route path='/' element={<APIRM />}/>
       </Routes>
       <Footer />
