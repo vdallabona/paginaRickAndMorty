@@ -3,7 +3,7 @@ import Card from '../../components/Card';
 import SelectPage from '../../components/SelectPage';
 import './styles.css';
 
-export default function APIRM() {
+export default function Characters() {
     const [conteudo, setConteudo] = useState(<p>Loading...</p>);
     const [numero, setNumero] = useState(1);
     const [filtroStatus, setFiltroStatus] = useState('');

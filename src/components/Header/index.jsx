@@ -14,7 +14,7 @@ export default function Header(){
             <nav>
                 <Link to='/'>Characters</Link>
                 <Link to='/Duck'>Duck</Link>
-                <Link to='/Home'>In progress</Link>
+                <Link to='/Episodes'>Episodes</Link>
             </nav>
         </>
     )

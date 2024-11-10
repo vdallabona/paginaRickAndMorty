@@ -1,9 +1,9 @@
 import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
-import Home from './pages/Home'
+import Episodes from './pages/Episodes'
 import Duck from './pages/Duck'
-import APIRM from './pages/APIRM'
+import Characters from './pages/characters'
 import { Route, Routes } from 'react-router-dom'
 
 function App() {
@@ -16,9 +16,9 @@ function App() {
       </div>
 
       <Routes>
-        <Route path='/Home' element={<Home />}/>
+        <Route path='/Episodes' element={<Episodes />}/>
         <Route path='/Duck' element={<Duck />}/>
-        <Route path='/' element={<APIRM />}/>
+        <Route path='/' element={<Characters />}/>
       </Routes>
       <Footer />
     </>
